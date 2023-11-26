@@ -1,6 +1,7 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 
 class Num_Theory
@@ -47,10 +48,6 @@ class Num_Theory
         System.out.println("\n\n\t\t\tGoldbach Number");
         System.out.println("Definition: \nGoldbach number is a positive even integer that can be expressed as sum of two odd primes. The pair of the two prime numbers whose sum express the given even number is called the Goldbach partition of the even number.");
 
-        //System.out.println("\nEnter positive even number:");
-
-        //int num = Integer.parseInt(buff_reader.readLine());
-
         int val1, sum = 0;
 
         if(num % 2 == 1 || num <= 0)
@@ -93,16 +90,11 @@ class Num_Theory
     boolean Hamming_Num(int no)throws IOException
     {
 
-        //Definiton
-
-        // Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c
-        //where a, b, c greater than equal to 0
+        // Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c where a, b, c greater than equal to 0
 
         System.out.println("\n\n\t\t\tHamming Number");
         System.out.println("\nDefinition: Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c        where a, b, c greater than equal to 0\n");
-        //System.out.println("\nEnter a number:");
-
-        //int no = Integer.parseInt(buff_reader.readLine());
+        
         int num_backup = no;
         boolean flag = true;
 
@@ -151,9 +143,7 @@ class Num_Theory
 
         System.out.println("\n\n\t\t\tNarcissistic Number");
         System.out.println("\nDefinition: Narcissistic number is a number that is the summation of its digits each raised to the power of the number of digits. It is also called Pluperfect Digital Invariant(PPDI)");
-        //System.out.println("\nEnter a number:");
 
-        //int num = Integer.parseInt(buff_reader.readLine());
         int traverse_num = num , sum = 0;
 
         while(traverse_num != 0)
@@ -190,8 +180,6 @@ class Num_Theory
 
         System.out.println("\n\n\t\t\tMarkov Number");
         System.out.println("\nDefinition: Markov number are the positive integers x, y, z that appear in the solution of the Markov Diophantine equation x^2 + y^2 + z^2 = 3xyz");
-        //System.out.println("\nEnter a positive number:");
-        //int num = Integer.parseInt(buff_reader.readLine());
 
         int mar1 , mar2 , mar3 , lhs , rhs , flag = 0;
         for(mar1 = 1; mar1 <= num; mar1++)
@@ -250,9 +238,6 @@ class Num_Theory
         System.out.println("\n\n\t\t\tColombian Number");
         System.out.println("\nDefinition: Colombian number is an integer that cannot be written as the summation of any other integer 'num' and the digits of 'num'.");
 
-        //System.out.println("\nEnter a positive number:");
-        //int num = Integer.parseInt(buff_reader.readLine());
-
         int flag = 0 , sum , traverse_num;
 
         for(int a = 1; a <= num; a++)
@@ -297,9 +282,6 @@ class Num_Theory
 
         System.out.println("\n\n\t\t\tThabit Number");
         System.out.println("\nDefinition: Thabit Number is an integer of form : 3 * 2^num - 1 , num = non-negative integer");
-
-        //System.out.println("\nEnter a non-negative number:");
-        //int num = Integer.parseInt(buff_reader.readLine());
 
         if(num >=0)
         {
@@ -347,9 +329,6 @@ class Num_Theory
         System.out.println("\n\n\t\t\tWoodall Number");
         System.out.println("\nDefinition: Woodall number is any natural number 'W_num' that satisfies form W_num = num*(2^num) - 1, num = natural number");
 
-        //System.out.println("\nEnter a natural number:");
-        //int num = Integer.parseInt(buff_reader.readLine());
-
         int cur_num, eq_val, flag = 0;
 
         if(num > 0)
@@ -396,9 +375,6 @@ class Num_Theory
 
         System.out.println("\n\n\t\t\tLeyland Number");
         System.out.println("\nDefinition: Leyland number 'num' is a number where num = num1^num2 + num2^num1 , num1, num2 = integers greater than 1");
-
-        //System.out.println("\nEnter a number:");
-        //int num = Integer.parseInt(buff_reader.readLine());
 
         int num1, num2, num1_pow_num2, num2_pow_num1,flag = 0;
 
@@ -452,9 +428,6 @@ class Num_Theory
 
         System.out.println("\n\n\t\t\tSociable Number");
         System.out.println("\nDefinition: Sociable numbers are numbers whose Aliquot sums form a periodic sequence.");
-
-        //System.out.println("\nEnter a number:");
-        //long num = Long.parseLong(buff_reader.readLine());
 
         long l, sum = 0, traverse_num = num, cnt = 0, flag = 0;
 
@@ -511,9 +484,6 @@ class Num_Theory
 
         System.out.println("\n\n\t\t\tEmirp Number");
         System.out.println("\nDefinition: Emirp Number is a prime number that results in another prime number when its digits are reversed.");
-        //System.out.println("\nEnter a number:");
-
-        //int num = Integer.parseInt(buff_reader.readLine());
 
         StringBuffer str = new StringBuffer(String.valueOf(num));
         int reverse = Integer.parseInt(String.valueOf(str.reverse()));
@@ -573,9 +543,6 @@ class Num_Theory
 
         int num1,num2,cubes, cnt = 0;
 
-        //System.out.println("\nEnter a number:");
-        //int num = Integer.parseInt(buff_reader.readLine());
-
         if(num == 1729)
         {
             System.out.println("\n\n" + num + " is the smallest Ramanujan Number");
@@ -621,9 +588,6 @@ class Num_Theory
     {
         // Armstrong no. = sum of cubes of the digits of a given number is equal to the number itself
 
-        //System.out.println("\nEnter a number:");
-        //int num = Integer.parseInt(buff_reader.readLine());
-
         System.out.println("\n\n\t\t\tArmstrong Number");
         System.out.println("\nDefinition: Armstrong no. = sum of cubes of the digits of a given number is equal to the number itself");
 
@@ -659,9 +623,6 @@ class Num_Theory
     {
         //The summation of all factors of a given number except itself is
         //equal to the number, then the number is called a Perfect Number.
-
-        //System.out.println("\nEnter a number:");
-        //int num = Integer.parseInt(buff_reader.readLine());
 
         System.out.println("\n\n\t\t\tPerfect Number");
         System.out.println("\nDefinition: The summation of all factors of a given number except itself is equal to the number, then the number is called a Perfect Number.");
@@ -742,11 +703,7 @@ class Num_Theory
     boolean Evil_Num(int num)throws IOException
     {
         //A positive and whole number which has even number of 1’s in its binary form is called an evil number.
-
-        //System.out.println("Enter a no.");
-        //int n = Integer.parseInt(dfs.readLine());
-
-
+        
         System.out.println("\n\n\t\t\tEvil Number");
         System.out.println("\nDefinition: A positive and whole number which has even number of 1’s in its binary form is called an evil number.");
 

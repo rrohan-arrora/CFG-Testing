@@ -1,34 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Num_Theory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TestingProj</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Num_Theory.java</span></div><h1>Num_Theory.java</h1><pre class="source lang-java linenums">import java.io.*;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Num_Theory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TestingProj</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Num_Theory.java</span></div><h1>Num_Theory.java</h1><pre class="source lang-java linenums">import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 
-<span class="fc" id="L6">class Num_Theory</span>
+<span class="fc" id="L7">class Num_Theory</span>
 {
-<span class="fc" id="L8">    static BufferedReader buff_reader = new BufferedReader(new InputStreamReader(System.in));</span>
+<span class="fc" id="L9">    static BufferedReader buff_reader = new BufferedReader(new InputStreamReader(System.in));</span>
 
     //Utility Function
     int odd_prime_num(int num)
     {
         //required for Golbach Number
 
-<span class="fc" id="L15">        int val1 , val2 = 0;</span>
+<span class="fc" id="L16">        int val1 , val2 = 0;</span>
 
-<span class="fc bfc" id="L17" title="All 2 branches covered.">        for(val1 = 1; val1 &lt;= num; val1++)</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        for(val1 = 1; val1 &lt;= num; val1++)</span>
         {
-<span class="fc bfc" id="L19" title="All 2 branches covered.">            if(num % val1 == 0)</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            if(num % val1 == 0)</span>
             {
-<span class="fc" id="L21">                val2++;</span>
+<span class="fc" id="L22">                val2++;</span>
             }
         }
 
-<span class="fc bfc" id="L25" title="All 4 branches covered.">        if(val2 == 2 &amp;&amp; num % 2 == 1)</span>
+<span class="fc bfc" id="L26" title="All 4 branches covered.">        if(val2 == 2 &amp;&amp; num % 2 == 1)</span>
         {
-<span class="fc" id="L27">            return 1;</span>
+<span class="fc" id="L28">            return 1;</span>
         }
         else
         {
-<span class="fc" id="L31">            return 0;</span>
+<span class="fc" id="L32">            return 0;</span>
         }
     }
 
@@ -44,43 +45,39 @@ import java.util.ArrayList;
         //Goldbach number is a positive even integer that can be expressed as sum of two odd primes.
         //The pair of the two prime numbers whose sum express the given even number is called the Goldbach partition of the even number.
 
-<span class="fc" id="L47">        System.out.println(&quot;\n\n\t\t\tGoldbach Number&quot;);</span>
-<span class="fc" id="L48">        System.out.println(&quot;Definition: \nGoldbach number is a positive even integer that can be expressed as sum of two odd primes. The pair of the two prime numbers whose sum express the given even number is called the Goldbach partition of the even number.&quot;);</span>
+<span class="fc" id="L48">        System.out.println(&quot;\n\n\t\t\tGoldbach Number&quot;);</span>
+<span class="fc" id="L49">        System.out.println(&quot;Definition: \nGoldbach number is a positive even integer that can be expressed as sum of two odd primes. The pair of the two prime numbers whose sum express the given even number is called the Goldbach partition of the even number.&quot;);</span>
 
-        //System.out.println(&quot;\nEnter positive even number:&quot;);
+<span class="fc" id="L51">        int val1, sum = 0;</span>
 
-        //int num = Integer.parseInt(buff_reader.readLine());
-
-<span class="fc" id="L54">        int val1, sum = 0;</span>
-
-<span class="pc bpc" id="L56" title="1 of 4 branches missed.">        if(num % 2 == 1 || num &lt;= 0)</span>
+<span class="pc bpc" id="L53" title="1 of 4 branches missed.">        if(num % 2 == 1 || num &lt;= 0)</span>
         {
-<span class="fc" id="L58">            System.out.println(&quot;\nInvalid input: You've either entered a negative or odd number&quot;);</span>
-<span class="fc" id="L59">            return false;</span>
+<span class="fc" id="L55">            System.out.println(&quot;\nInvalid input: You've either entered a negative or odd number&quot;);</span>
+<span class="fc" id="L56">            return false;</span>
         }
 
-<span class="fc bfc" id="L62" title="All 2 branches covered.">        else if(num &lt;= 4)</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        else if(num &lt;= 4)</span>
         {
-<span class="fc" id="L64">            System.out.println(&quot;\n\n&quot;+num + &quot; is not a Goldbach Number. Did not find a prime partition for the given number.&quot;);</span>
-<span class="fc" id="L65">            return false;</span>
+<span class="fc" id="L61">            System.out.println(&quot;\n\n&quot;+num + &quot; is not a Goldbach Number. Did not find a prime partition for the given number.&quot;);</span>
+<span class="fc" id="L62">            return false;</span>
         }
 
         else
         {
-<span class="fc" id="L70">            System.out.println(&quot;\nThe Prime Partition for the given number is: &quot;);</span>
+<span class="fc" id="L67">            System.out.println(&quot;\nThe Prime Partition for the given number is: &quot;);</span>
 
-<span class="fc bfc" id="L72" title="All 2 branches covered.">            for(val1 = 0;val1 &lt; num/2;val1 ++)</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">            for(val1 = 0;val1 &lt; num/2;val1 ++)</span>
             {
-<span class="fc" id="L74">                sum = val1 + (num - val1);</span>
+<span class="fc" id="L71">                sum = val1 + (num - val1);</span>
 
-<span class="pc bpc" id="L76" title="1 of 6 branches missed.">                if(odd_prime_num(val1) == 1 &amp;&amp; odd_prime_num(num - val1) == 1 &amp;&amp; sum == num)</span>
+<span class="pc bpc" id="L73" title="1 of 6 branches missed.">                if(odd_prime_num(val1) == 1 &amp;&amp; odd_prime_num(num - val1) == 1 &amp;&amp; sum == num)</span>
                 {
-<span class="fc" id="L78">                    System.out.println(val1 + &quot; and &quot; + (num - val1));</span>
+<span class="fc" id="L75">                    System.out.println(val1 + &quot; and &quot; + (num - val1));</span>
                 }
             }
 
-<span class="fc" id="L82">            System.out.println(&quot;\n&quot;+num + &quot; is a Goldbach Number with the above Prime Pair partition.&quot;);</span>
-<span class="fc" id="L83">            return true;</span>
+<span class="fc" id="L79">            System.out.println(&quot;\n&quot;+num + &quot; is a Goldbach Number with the above Prime Pair partition.&quot;);</span>
+<span class="fc" id="L80">            return true;</span>
         }
     }
 
@@ -93,47 +90,42 @@ import java.util.ArrayList;
     boolean Hamming_Num(int no)throws IOException
     {
 
-        //Definiton
+        // Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c where a, b, c greater than equal to 0
 
-        // Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c
-        //where a, b, c greater than equal to 0
+<span class="fc" id="L95">        System.out.println(&quot;\n\n\t\t\tHamming Number&quot;);</span>
+<span class="fc" id="L96">        System.out.println(&quot;\nDefinition: Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c        where a, b, c greater than equal to 0\n&quot;);</span>
+        
+<span class="fc" id="L98">        int num_backup = no;</span>
+<span class="fc" id="L99">        boolean flag = true;</span>
 
-<span class="fc" id="L101">        System.out.println(&quot;\n\n\t\t\tHamming Number&quot;);</span>
-<span class="fc" id="L102">        System.out.println(&quot;\nDefinition: Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c        where a, b, c greater than equal to 0\n&quot;);</span>
-        //System.out.println(&quot;\nEnter a number:&quot;);
-
-        //int no = Integer.parseInt(buff_reader.readLine());
-<span class="fc" id="L106">        int num_backup = no;</span>
-<span class="fc" id="L107">        boolean flag = true;</span>
-
-<span class="fc bfc" id="L109" title="All 2 branches covered.">        while(no != 1)</span>
+<span class="fc bfc" id="L101" title="All 2 branches covered.">        while(no != 1)</span>
         {
 
-<span class="fc bfc" id="L112" title="All 2 branches covered.">            if (no % 2 == 0)</span>
-<span class="fc" id="L113">                no /= 2;</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">            if (no % 2 == 0)</span>
+<span class="fc" id="L105">                no /= 2;</span>
 
-<span class="fc bfc" id="L115" title="All 2 branches covered.">            else if (no % 3 == 0)</span>
-<span class="fc" id="L116">                no /= 3;</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">            else if (no % 3 == 0)</span>
+<span class="fc" id="L108">                no /= 3;</span>
 
-<span class="fc bfc" id="L118" title="All 2 branches covered.">            else if (no % 5 == 0)</span>
-<span class="fc" id="L119">                no /= 5;</span>
+<span class="fc bfc" id="L110" title="All 2 branches covered.">            else if (no % 5 == 0)</span>
+<span class="fc" id="L111">                no /= 5;</span>
 
             else
             {
-<span class="fc" id="L123">                System.out.println(&quot;\n&quot;+num_backup + &quot; isn't a Hamming Number.\nDid not find numbers a,b,c that obey the form Hamming_Num = 2^a * 3^b * 5^c&quot;);</span>
-<span class="fc" id="L124">                flag = false;</span>
-<span class="fc" id="L125">                return false;</span>
+<span class="fc" id="L115">                System.out.println(&quot;\n&quot;+num_backup + &quot; isn't a Hamming Number.\nDid not find numbers a,b,c that obey the form Hamming_Num = 2^a * 3^b * 5^c&quot;);</span>
+<span class="fc" id="L116">                flag = false;</span>
+<span class="fc" id="L117">                return false;</span>
             }
         }
 
 
-<span class="pc bpc" id="L130" title="1 of 2 branches missed.">        if(flag = true)</span>
+<span class="pc bpc" id="L122" title="1 of 2 branches missed.">        if(flag = true)</span>
         {
-<span class="fc" id="L132">            System.out.println(num_backup + &quot; is a Hamming number. (Also known as Ugly number)&quot;);</span>
-<span class="fc" id="L133">            return true;</span>
+<span class="fc" id="L124">            System.out.println(num_backup + &quot; is a Hamming number. (Also known as Ugly number)&quot;);</span>
+<span class="fc" id="L125">            return true;</span>
         }
         else
-<span class="nc" id="L136">            return false;</span>
+<span class="nc" id="L128">            return false;</span>
     }
 
 
@@ -149,29 +141,27 @@ import java.util.ArrayList;
         //Narcissistic number is a number that is the summation of its digits each raised to the power
         //of the number of digits. It is also called Pluperfect Digital Invariant(PPDI).
 
-<span class="fc" id="L152">        System.out.println(&quot;\n\n\t\t\tNarcissistic Number&quot;);</span>
-<span class="fc" id="L153">        System.out.println(&quot;\nDefinition: Narcissistic number is a number that is the summation of its digits each raised to the power of the number of digits. It is also called Pluperfect Digital Invariant(PPDI)&quot;);</span>
-        //System.out.println(&quot;\nEnter a number:&quot;);
+<span class="fc" id="L144">        System.out.println(&quot;\n\n\t\t\tNarcissistic Number&quot;);</span>
+<span class="fc" id="L145">        System.out.println(&quot;\nDefinition: Narcissistic number is a number that is the summation of its digits each raised to the power of the number of digits. It is also called Pluperfect Digital Invariant(PPDI)&quot;);</span>
 
-        //int num = Integer.parseInt(buff_reader.readLine());
-<span class="fc" id="L157">        int traverse_num = num , sum = 0;</span>
+<span class="fc" id="L147">        int traverse_num = num , sum = 0;</span>
 
-<span class="fc bfc" id="L159" title="All 2 branches covered.">        while(traverse_num != 0)</span>
+<span class="fc bfc" id="L149" title="All 2 branches covered.">        while(traverse_num != 0)</span>
         {
-<span class="fc" id="L161">            sum = sum + (int)(Math.pow(traverse_num % 10 , (String.valueOf(num)).length()));</span>
-<span class="fc" id="L162">            traverse_num = traverse_num / 10;</span>
+<span class="fc" id="L151">            sum = sum + (int)(Math.pow(traverse_num % 10 , (String.valueOf(num)).length()));</span>
+<span class="fc" id="L152">            traverse_num = traverse_num / 10;</span>
         }
 
-<span class="fc bfc" id="L165" title="All 2 branches covered.">        if(sum == num)</span>
+<span class="fc bfc" id="L155" title="All 2 branches covered.">        if(sum == num)</span>
         {
-<span class="fc" id="L167">            System.out.println(&quot;\n\n&quot;+num + &quot; is a Narcissistic Number&quot;);</span>
-<span class="fc" id="L168">            return true;</span>
+<span class="fc" id="L157">            System.out.println(&quot;\n\n&quot;+num + &quot; is a Narcissistic Number&quot;);</span>
+<span class="fc" id="L158">            return true;</span>
         }
 
         else
         {
-<span class="fc" id="L173">            System.out.println(&quot;\n\n&quot;+ num + &quot; is not a Narcissistic Number&quot;);</span>
-<span class="fc" id="L174">            return false;</span>
+<span class="fc" id="L163">            System.out.println(&quot;\n\n&quot;+ num + &quot; is not a Narcissistic Number&quot;);</span>
+<span class="fc" id="L164">            return false;</span>
         }
     }
 
@@ -188,48 +178,46 @@ import java.util.ArrayList;
         //Markov number are the positive integers x, y, z that appear in the solution of the Markov Diophantine equation
         //x^2 + y^2 + z^2 = 3xyz
 
-<span class="fc" id="L191">        System.out.println(&quot;\n\n\t\t\tMarkov Number&quot;);</span>
-<span class="fc" id="L192">        System.out.println(&quot;\nDefinition: Markov number are the positive integers x, y, z that appear in the solution of the Markov Diophantine equation x^2 + y^2 + z^2 = 3xyz&quot;);</span>
-        //System.out.println(&quot;\nEnter a positive number:&quot;);
-        //int num = Integer.parseInt(buff_reader.readLine());
+<span class="fc" id="L181">        System.out.println(&quot;\n\n\t\t\tMarkov Number&quot;);</span>
+<span class="fc" id="L182">        System.out.println(&quot;\nDefinition: Markov number are the positive integers x, y, z that appear in the solution of the Markov Diophantine equation x^2 + y^2 + z^2 = 3xyz&quot;);</span>
 
-<span class="fc" id="L196">        int mar1 , mar2 , mar3 , lhs , rhs , flag = 0;</span>
-<span class="fc bfc" id="L197" title="All 2 branches covered.">        for(mar1 = 1; mar1 &lt;= num; mar1++)</span>
+<span class="fc" id="L184">        int mar1 , mar2 , mar3 , lhs , rhs , flag = 0;</span>
+<span class="fc bfc" id="L185" title="All 2 branches covered.">        for(mar1 = 1; mar1 &lt;= num; mar1++)</span>
         {
-<span class="fc bfc" id="L199" title="All 2 branches covered.">            for(mar2 = 1; mar2 &lt;= num; mar2++)</span>
+<span class="fc bfc" id="L187" title="All 2 branches covered.">            for(mar2 = 1; mar2 &lt;= num; mar2++)</span>
             {
-<span class="fc bfc" id="L201" title="All 2 branches covered.">                for(mar3 = 1; mar3 &lt;= num; mar3++)</span>
+<span class="fc bfc" id="L189" title="All 2 branches covered.">                for(mar3 = 1; mar3 &lt;= num; mar3++)</span>
                 {
-<span class="fc" id="L203">                    lhs = (mar1 * mar1) + (mar2 * mar2) + (mar3 * mar3);</span>
-<span class="fc" id="L204">                    rhs = 3 * mar1 * mar2 * mar3;</span>
-<span class="pc bpc" id="L205" title="2 of 8 branches missed.">                    if(lhs == rhs &amp;&amp; (num == mar1 || num == mar2 || num == mar3))</span>
+<span class="fc" id="L191">                    lhs = (mar1 * mar1) + (mar2 * mar2) + (mar3 * mar3);</span>
+<span class="fc" id="L192">                    rhs = 3 * mar1 * mar2 * mar3;</span>
+<span class="pc bpc" id="L193" title="2 of 8 branches missed.">                    if(lhs == rhs &amp;&amp; (num == mar1 || num == mar2 || num == mar3))</span>
                     {
-<span class="fc" id="L207">                        System.out.println(&quot;\n\n&quot;+num + &quot; is a Markov Number&quot;);</span>
-<span class="fc" id="L208">                        System.out.println(&quot;First Triplet Containing the Markov Number: &quot; + &quot;[&quot; + mar1 + &quot; , &quot; + mar2 + &quot; , &quot; + mar3 + &quot;]&quot;);</span>
-<span class="fc" id="L209">                        flag = 1;</span>
-<span class="fc" id="L210">                        break;</span>
+<span class="fc" id="L195">                        System.out.println(&quot;\n\n&quot;+num + &quot; is a Markov Number&quot;);</span>
+<span class="fc" id="L196">                        System.out.println(&quot;First Triplet Containing the Markov Number: &quot; + &quot;[&quot; + mar1 + &quot; , &quot; + mar2 + &quot; , &quot; + mar3 + &quot;]&quot;);</span>
+<span class="fc" id="L197">                        flag = 1;</span>
+<span class="fc" id="L198">                        break;</span>
                     }
                 }
-<span class="fc bfc" id="L213" title="All 2 branches covered.">                if(flag == 1)</span>
-<span class="fc" id="L214">                    break;</span>
+<span class="fc bfc" id="L201" title="All 2 branches covered.">                if(flag == 1)</span>
+<span class="fc" id="L202">                    break;</span>
             }
 
-<span class="fc bfc" id="L217" title="All 2 branches covered.">            if(flag == 1)</span>
+<span class="fc bfc" id="L205" title="All 2 branches covered.">            if(flag == 1)</span>
             {
-<span class="fc" id="L219">                return true;</span>
+<span class="fc" id="L207">                return true;</span>
 
             }
 
         }
 
-<span class="pc bpc" id="L225" title="1 of 2 branches missed.">        if(flag == 0)</span>
+<span class="pc bpc" id="L213" title="1 of 2 branches missed.">        if(flag == 0)</span>
         {
-<span class="fc" id="L227">            System.out.println(&quot;\n&quot;+num + &quot; is not a Markov Number&quot;);</span>
-<span class="fc" id="L228">            return false;</span>
+<span class="fc" id="L215">            System.out.println(&quot;\n&quot;+num + &quot; is not a Markov Number&quot;);</span>
+<span class="fc" id="L216">            return false;</span>
         }
 
         else
-<span class="nc" id="L232">            return true;</span>
+<span class="nc" id="L220">            return true;</span>
     }
 
 
@@ -247,39 +235,36 @@ import java.util.ArrayList;
         //Colombian number is an integer that cannot be written as the summation of any other integer 'num'
         //and the digits of 'num'.
 
-<span class="fc" id="L250">        System.out.println(&quot;\n\n\t\t\tColombian Number&quot;);</span>
-<span class="fc" id="L251">        System.out.println(&quot;\nDefinition: Colombian number is an integer that cannot be written as the summation of any other integer 'num' and the digits of 'num'.&quot;);</span>
+<span class="fc" id="L238">        System.out.println(&quot;\n\n\t\t\tColombian Number&quot;);</span>
+<span class="fc" id="L239">        System.out.println(&quot;\nDefinition: Colombian number is an integer that cannot be written as the summation of any other integer 'num' and the digits of 'num'.&quot;);</span>
 
-        //System.out.println(&quot;\nEnter a positive number:&quot;);
-        //int num = Integer.parseInt(buff_reader.readLine());
+<span class="fc" id="L241">        int flag = 0 , sum , traverse_num;</span>
 
-<span class="fc" id="L256">        int flag = 0 , sum , traverse_num;</span>
-
-<span class="fc bfc" id="L258" title="All 2 branches covered.">        for(int a = 1; a &lt;= num; a++)</span>
+<span class="fc bfc" id="L243" title="All 2 branches covered.">        for(int a = 1; a &lt;= num; a++)</span>
         {
-<span class="fc" id="L260">            sum = 0;</span>
-<span class="fc" id="L261">            traverse_num = a;</span>
-<span class="fc" id="L262">            sum = sum + traverse_num;</span>
-<span class="fc bfc" id="L263" title="All 2 branches covered.">            while(traverse_num != 0)</span>
+<span class="fc" id="L245">            sum = 0;</span>
+<span class="fc" id="L246">            traverse_num = a;</span>
+<span class="fc" id="L247">            sum = sum + traverse_num;</span>
+<span class="fc bfc" id="L248" title="All 2 branches covered.">            while(traverse_num != 0)</span>
             {
-<span class="fc" id="L265">                sum = sum + (traverse_num % 10);</span>
-<span class="fc" id="L266">                traverse_num = traverse_num / 10;</span>
+<span class="fc" id="L250">                sum = sum + (traverse_num % 10);</span>
+<span class="fc" id="L251">                traverse_num = traverse_num / 10;</span>
             }
 
-<span class="fc bfc" id="L269" title="All 2 branches covered.">            if(sum == num)</span>
+<span class="fc bfc" id="L254" title="All 2 branches covered.">            if(sum == num)</span>
             {
-<span class="fc" id="L271">                System.out.println(&quot;\n\n&quot;+num + &quot; is not a Colombian Number&quot;);</span>
-<span class="fc" id="L272">                flag = 1;</span>
-<span class="fc" id="L273">                break;</span>
+<span class="fc" id="L256">                System.out.println(&quot;\n\n&quot;+num + &quot; is not a Colombian Number&quot;);</span>
+<span class="fc" id="L257">                flag = 1;</span>
+<span class="fc" id="L258">                break;</span>
             }
         }
 
-<span class="fc bfc" id="L277" title="All 2 branches covered.">        if(flag == 0)</span>
+<span class="fc bfc" id="L262" title="All 2 branches covered.">        if(flag == 0)</span>
         {
-<span class="fc" id="L279">            System.out.println(&quot;\n\n&quot;+num + &quot; is  a Colombian Number&quot;);</span>
-<span class="fc" id="L280">            return true;</span>
+<span class="fc" id="L264">            System.out.println(&quot;\n\n&quot;+num + &quot; is  a Colombian Number&quot;);</span>
+<span class="fc" id="L265">            return true;</span>
         }
-<span class="fc" id="L282">        return false;</span>
+<span class="fc" id="L267">        return false;</span>
     }
 
 
@@ -295,40 +280,37 @@ import java.util.ArrayList;
 
         //Thabit Number is an integer of form : 3 * 2^num - 1 , num = non-negative integer
 
-<span class="fc" id="L298">        System.out.println(&quot;\n\n\t\t\tThabit Number&quot;);</span>
-<span class="fc" id="L299">        System.out.println(&quot;\nDefinition: Thabit Number is an integer of form : 3 * 2^num - 1 , num = non-negative integer&quot;);</span>
+<span class="fc" id="L283">        System.out.println(&quot;\n\n\t\t\tThabit Number&quot;);</span>
+<span class="fc" id="L284">        System.out.println(&quot;\nDefinition: Thabit Number is an integer of form : 3 * 2^num - 1 , num = non-negative integer&quot;);</span>
 
-        //System.out.println(&quot;\nEnter a non-negative number:&quot;);
-        //int num = Integer.parseInt(buff_reader.readLine());
-
-<span class="fc bfc" id="L304" title="All 2 branches covered.">        if(num &gt;=0)</span>
+<span class="fc bfc" id="L286" title="All 2 branches covered.">        if(num &gt;=0)</span>
         {
-<span class="fc" id="L306">            int a, eq_val, flag = 0;</span>
+<span class="fc" id="L288">            int a, eq_val, flag = 0;</span>
 
-<span class="fc bfc" id="L308" title="All 2 branches covered.">            for(a = 1; a &lt;= num; a++)</span>
+<span class="fc bfc" id="L290" title="All 2 branches covered.">            for(a = 1; a &lt;= num; a++)</span>
             {
-<span class="fc" id="L310">                eq_val = (3 * ((int)Math.pow(2 , a))) - 1;</span>
+<span class="fc" id="L292">                eq_val = (3 * ((int)Math.pow(2 , a))) - 1;</span>
 
-<span class="fc bfc" id="L312" title="All 2 branches covered.">                if(eq_val == num)</span>
+<span class="fc bfc" id="L294" title="All 2 branches covered.">                if(eq_val == num)</span>
                 {
-<span class="fc" id="L314">                    System.out.println(&quot;\n\n&quot;+num + &quot; is a Thabit Number&quot;);</span>
-<span class="fc" id="L315">                    flag = 1;</span>
-<span class="fc" id="L316">                    break;</span>
+<span class="fc" id="L296">                    System.out.println(&quot;\n\n&quot;+num + &quot; is a Thabit Number&quot;);</span>
+<span class="fc" id="L297">                    flag = 1;</span>
+<span class="fc" id="L298">                    break;</span>
                 }
             }
 
-<span class="fc bfc" id="L320" title="All 2 branches covered.">            if(flag == 0)</span>
+<span class="fc bfc" id="L302" title="All 2 branches covered.">            if(flag == 0)</span>
             {
-<span class="fc" id="L322">                System.out.println(&quot;\n\n&quot;+num + &quot; is not a Thabit Number&quot;);</span>
-<span class="fc" id="L323">                return false;</span>
+<span class="fc" id="L304">                System.out.println(&quot;\n\n&quot;+num + &quot; is not a Thabit Number&quot;);</span>
+<span class="fc" id="L305">                return false;</span>
             }
-<span class="fc" id="L325">            return true;</span>
+<span class="fc" id="L307">            return true;</span>
         }
 
         else
         {
-<span class="fc" id="L330">            System.out.println(&quot;\n\nInvalid input: &quot;+num + &quot; is a negative number&quot;);</span>
-<span class="fc" id="L331">            return false;</span>
+<span class="fc" id="L312">            System.out.println(&quot;\n\nInvalid input: &quot;+num + &quot; is a negative number&quot;);</span>
+<span class="fc" id="L313">            return false;</span>
         }
     }
 
@@ -344,40 +326,37 @@ import java.util.ArrayList;
         //Woodall number is any natural number 'W_num' that satisfies form W_num = num*(2^num) - 1
         // num = natural number
 
-<span class="fc" id="L347">        System.out.println(&quot;\n\n\t\t\tWoodall Number&quot;);</span>
-<span class="fc" id="L348">        System.out.println(&quot;\nDefinition: Woodall number is any natural number 'W_num' that satisfies form W_num = num*(2^num) - 1, num = natural number&quot;);</span>
+<span class="fc" id="L329">        System.out.println(&quot;\n\n\t\t\tWoodall Number&quot;);</span>
+<span class="fc" id="L330">        System.out.println(&quot;\nDefinition: Woodall number is any natural number 'W_num' that satisfies form W_num = num*(2^num) - 1, num = natural number&quot;);</span>
 
-        //System.out.println(&quot;\nEnter a natural number:&quot;);
-        //int num = Integer.parseInt(buff_reader.readLine());
+<span class="fc" id="L332">        int cur_num, eq_val, flag = 0;</span>
 
-<span class="fc" id="L353">        int cur_num, eq_val, flag = 0;</span>
-
-<span class="fc bfc" id="L355" title="All 2 branches covered.">        if(num &gt; 0)</span>
+<span class="fc bfc" id="L334" title="All 2 branches covered.">        if(num &gt; 0)</span>
         {
-<span class="fc bfc" id="L357" title="All 2 branches covered.">            for(cur_num = 1; cur_num &lt;= num; cur_num++)</span>
+<span class="fc bfc" id="L336" title="All 2 branches covered.">            for(cur_num = 1; cur_num &lt;= num; cur_num++)</span>
             {
-<span class="fc" id="L359">                eq_val = (cur_num * (int)(Math.pow(2 , cur_num))) - 1;</span>
-<span class="fc bfc" id="L360" title="All 2 branches covered.">                if(eq_val == num)</span>
+<span class="fc" id="L338">                eq_val = (cur_num * (int)(Math.pow(2 , cur_num))) - 1;</span>
+<span class="fc bfc" id="L339" title="All 2 branches covered.">                if(eq_val == num)</span>
                 {
-<span class="fc" id="L362">                    System.out.println(&quot;\n\n&quot;+num  + &quot; is a Woodall Number for num = &quot; + cur_num);</span>
-<span class="fc" id="L363">                    flag = 1;</span>
-<span class="fc" id="L364">                    return true;</span>
+<span class="fc" id="L341">                    System.out.println(&quot;\n\n&quot;+num  + &quot; is a Woodall Number for num = &quot; + cur_num);</span>
+<span class="fc" id="L342">                    flag = 1;</span>
+<span class="fc" id="L343">                    return true;</span>
                 }
             }
-<span class="pc bpc" id="L367" title="1 of 2 branches missed.">            if(flag == 0)</span>
+<span class="pc bpc" id="L346" title="1 of 2 branches missed.">            if(flag == 0)</span>
             {
-<span class="fc" id="L369">                System.out.println(&quot;\n\n&quot;+num + &quot; is not a Woodall Number&quot;);</span>
-<span class="fc" id="L370">                return false;</span>
+<span class="fc" id="L348">                System.out.println(&quot;\n\n&quot;+num + &quot; is not a Woodall Number&quot;);</span>
+<span class="fc" id="L349">                return false;</span>
             }
         }
 
         else
         {
-<span class="fc" id="L376">            System.out.println(&quot;\n\nInvalid input: &quot;+num + &quot; is not a natural number&quot;);</span>
-<span class="fc" id="L377">            return false;</span>
+<span class="fc" id="L355">            System.out.println(&quot;\n\nInvalid input: &quot;+num + &quot; is not a natural number&quot;);</span>
+<span class="fc" id="L356">            return false;</span>
         }
 
-<span class="nc" id="L380">        return true;</span>
+<span class="nc" id="L359">        return true;</span>
     }
 
 
@@ -394,48 +373,45 @@ import java.util.ArrayList;
         //Leyland number 'num' is a number where num = num1^num2 + num2^num1
         // num1, num2 = integers greater than 1
 
-<span class="fc" id="L397">        System.out.println(&quot;\n\n\t\t\tLeyland Number&quot;);</span>
-<span class="fc" id="L398">        System.out.println(&quot;\nDefinition: Leyland number 'num' is a number where num = num1^num2 + num2^num1 , num1, num2 = integers greater than 1&quot;);</span>
+<span class="fc" id="L376">        System.out.println(&quot;\n\n\t\t\tLeyland Number&quot;);</span>
+<span class="fc" id="L377">        System.out.println(&quot;\nDefinition: Leyland number 'num' is a number where num = num1^num2 + num2^num1 , num1, num2 = integers greater than 1&quot;);</span>
 
-        //System.out.println(&quot;\nEnter a number:&quot;);
-        //int num = Integer.parseInt(buff_reader.readLine());
+<span class="fc" id="L379">        int num1, num2, num1_pow_num2, num2_pow_num1,flag = 0;</span>
 
-<span class="fc" id="L403">        int num1, num2, num1_pow_num2, num2_pow_num1,flag = 0;</span>
-
-<span class="fc bfc" id="L405" title="All 2 branches covered.">        if(num &gt; 1)</span>
+<span class="fc bfc" id="L381" title="All 2 branches covered.">        if(num &gt; 1)</span>
         {
-<span class="fc bfc" id="L407" title="All 2 branches covered.">            for(num1 = 2; num1 &lt; num; num1++)</span>
+<span class="fc bfc" id="L383" title="All 2 branches covered.">            for(num1 = 2; num1 &lt; num; num1++)</span>
             {
-<span class="fc bfc" id="L409" title="All 2 branches covered.">                for(num2 = 2; num2 &lt; num; num2 ++)</span>
+<span class="fc bfc" id="L385" title="All 2 branches covered.">                for(num2 = 2; num2 &lt; num; num2 ++)</span>
                 {
-<span class="fc" id="L411">                    num1_pow_num2 = (int)Math.pow(num1 , num2);</span>
-<span class="fc" id="L412">                    num2_pow_num1 = (int)Math.pow(num2 , num1);</span>
+<span class="fc" id="L387">                    num1_pow_num2 = (int)Math.pow(num1 , num2);</span>
+<span class="fc" id="L388">                    num2_pow_num1 = (int)Math.pow(num2 , num1);</span>
 
-<span class="pc bpc" id="L414" title="1 of 4 branches missed.">                    if(num1_pow_num2 + num2_pow_num1 == num || num1_pow_num2 - num2_pow_num1 == num)</span>
+<span class="pc bpc" id="L390" title="1 of 4 branches missed.">                    if(num1_pow_num2 + num2_pow_num1 == num || num1_pow_num2 - num2_pow_num1 == num)</span>
                     {
-<span class="fc" id="L416">                        flag = 1;</span>
-<span class="fc" id="L417">                        break;</span>
+<span class="fc" id="L392">                        flag = 1;</span>
+<span class="fc" id="L393">                        break;</span>
                     }
                 }
             }
 
-<span class="fc bfc" id="L422" title="All 2 branches covered.">            if(flag == 1)</span>
+<span class="fc bfc" id="L398" title="All 2 branches covered.">            if(flag == 1)</span>
             {
-<span class="fc" id="L424">                System.out.println(&quot;\n\n&quot;+ num  + &quot; is a Leyland number&quot;);</span>
-<span class="fc" id="L425">                return true;</span>
+<span class="fc" id="L400">                System.out.println(&quot;\n\n&quot;+ num  + &quot; is a Leyland number&quot;);</span>
+<span class="fc" id="L401">                return true;</span>
             }
 
             else
             {
-<span class="fc" id="L430">                System.out.println(&quot;\n\n&quot;+ num  + &quot; is not a Leyland number&quot;);</span>
-<span class="fc" id="L431">                return false;</span>
+<span class="fc" id="L406">                System.out.println(&quot;\n\n&quot;+ num  + &quot; is not a Leyland number&quot;);</span>
+<span class="fc" id="L407">                return false;</span>
             }
         }
 
         else
         {
-<span class="fc" id="L437">            System.out.println(&quot;\n\nInvalid input: &quot;+num + &quot; is not greater than 1&quot;);</span>
-<span class="fc" id="L438">            return false;</span>
+<span class="fc" id="L413">            System.out.println(&quot;\n\nInvalid input: &quot;+num + &quot; is not greater than 1&quot;);</span>
+<span class="fc" id="L414">            return false;</span>
         }
     }
 
@@ -450,50 +426,47 @@ import java.util.ArrayList;
         //Definiton
         //Sociable numbers are numbers whose Aliquot sums form a periodic sequence.
 
-<span class="fc" id="L453">        System.out.println(&quot;\n\n\t\t\tSociable Number&quot;);</span>
-<span class="fc" id="L454">        System.out.println(&quot;\nDefinition: Sociable numbers are numbers whose Aliquot sums form a periodic sequence.&quot;);</span>
+<span class="fc" id="L429">        System.out.println(&quot;\n\n\t\t\tSociable Number&quot;);</span>
+<span class="fc" id="L430">        System.out.println(&quot;\nDefinition: Sociable numbers are numbers whose Aliquot sums form a periodic sequence.&quot;);</span>
 
-        //System.out.println(&quot;\nEnter a number:&quot;);
-        //long num = Long.parseLong(buff_reader.readLine());
+<span class="fc" id="L432">        long l, sum = 0, traverse_num = num, cnt = 0, flag = 0;</span>
 
-<span class="fc" id="L459">        long l, sum = 0, traverse_num = num, cnt = 0, flag = 0;</span>
-
-<span class="fc bfc" id="L461" title="All 2 branches covered.">        while(traverse_num != 1)</span>
+<span class="fc bfc" id="L434" title="All 2 branches covered.">        while(traverse_num != 1)</span>
         {
-<span class="fc bfc" id="L463" title="All 2 branches covered.">            for(l = 1; l &lt; traverse_num; l++)</span>
+<span class="fc bfc" id="L436" title="All 2 branches covered.">            for(l = 1; l &lt; traverse_num; l++)</span>
             {
-<span class="fc bfc" id="L465" title="All 2 branches covered.">                if(traverse_num % l == 0)</span>
+<span class="fc bfc" id="L438" title="All 2 branches covered.">                if(traverse_num % l == 0)</span>
                 {
-<span class="fc" id="L467">                    sum = sum + l;</span>
+<span class="fc" id="L440">                    sum = sum + l;</span>
                 }
             }
 
-<span class="fc" id="L471">            traverse_num = sum;</span>
+<span class="fc" id="L444">            traverse_num = sum;</span>
 
-<span class="fc bfc" id="L473" title="All 2 branches covered.">            if(traverse_num == num)</span>
+<span class="fc bfc" id="L446" title="All 2 branches covered.">            if(traverse_num == num)</span>
             {
-<span class="fc" id="L475">                System.out.println(&quot;\n\n&quot;+ num + &quot; is a Sociable Number&quot;);</span>
-<span class="fc" id="L476">                flag = 1;</span>
-<span class="fc" id="L477">                return true;</span>
+<span class="fc" id="L448">                System.out.println(&quot;\n\n&quot;+ num + &quot; is a Sociable Number&quot;);</span>
+<span class="fc" id="L449">                flag = 1;</span>
+<span class="fc" id="L450">                return true;</span>
                 //break;
             }
 
-<span class="fc" id="L481">            sum = 0;</span>
-<span class="fc" id="L482">            cnt++;</span>
+<span class="fc" id="L454">            sum = 0;</span>
+<span class="fc" id="L455">            cnt++;</span>
 
-<span class="pc bpc" id="L484" title="1 of 2 branches missed.">            if(cnt &gt; 20)</span>
+<span class="pc bpc" id="L457" title="1 of 2 branches missed.">            if(cnt &gt; 20)</span>
             {
-<span class="nc" id="L486">                break;</span>
+<span class="nc" id="L459">                break;</span>
             }
         }
 
-<span class="pc bpc" id="L490" title="1 of 2 branches missed.">        if(flag == 0)</span>
+<span class="pc bpc" id="L463" title="1 of 2 branches missed.">        if(flag == 0)</span>
         {
-<span class="fc" id="L492">            System.out.println(&quot;\n\n&quot;+ num  + &quot; is not a Sociable number&quot;);</span>
-<span class="fc" id="L493">            return false;</span>
+<span class="fc" id="L465">            System.out.println(&quot;\n\n&quot;+ num  + &quot; is not a Sociable number&quot;);</span>
+<span class="fc" id="L466">            return false;</span>
         }
         else
-<span class="nc" id="L496">         return true;</span>
+<span class="nc" id="L469">         return true;</span>
     }
 
 
@@ -509,49 +482,46 @@ import java.util.ArrayList;
         //Definiton
         //Emirp Number is a prime number that results in another prime number when its digits are reversed.
 
-<span class="fc" id="L512">        System.out.println(&quot;\n\n\t\t\tEmirp Number&quot;);</span>
-<span class="fc" id="L513">        System.out.println(&quot;\nDefinition: Emirp Number is a prime number that results in another prime number when its digits are reversed.&quot;);</span>
-        //System.out.println(&quot;\nEnter a number:&quot;);
+<span class="fc" id="L485">        System.out.println(&quot;\n\n\t\t\tEmirp Number&quot;);</span>
+<span class="fc" id="L486">        System.out.println(&quot;\nDefinition: Emirp Number is a prime number that results in another prime number when its digits are reversed.&quot;);</span>
 
-        //int num = Integer.parseInt(buff_reader.readLine());
+<span class="fc" id="L488">        StringBuffer str = new StringBuffer(String.valueOf(num));</span>
+<span class="fc" id="L489">        int reverse = Integer.parseInt(String.valueOf(str.reverse()));</span>
 
-<span class="fc" id="L518">        StringBuffer str = new StringBuffer(String.valueOf(num));</span>
-<span class="fc" id="L519">        int reverse = Integer.parseInt(String.valueOf(str.reverse()));</span>
+<span class="fc" id="L491">        int k, count1 = 0, count2 = 0;</span>
 
-<span class="fc" id="L521">        int k, count1 = 0, count2 = 0;</span>
-
-<span class="fc bfc" id="L523" title="All 2 branches covered.">        for(k = 1; k &lt;= num; k++)</span>
+<span class="fc bfc" id="L493" title="All 2 branches covered.">        for(k = 1; k &lt;= num; k++)</span>
         {
-<span class="fc bfc" id="L525" title="All 2 branches covered.">            if(num % k == 0)</span>
+<span class="fc bfc" id="L495" title="All 2 branches covered.">            if(num % k == 0)</span>
             {
-<span class="fc" id="L527">                count1++;</span>
+<span class="fc" id="L497">                count1++;</span>
             }
         }
 
-<span class="fc bfc" id="L531" title="All 2 branches covered.">        for(k = 1; k &lt;= reverse; k++)</span>
+<span class="fc bfc" id="L501" title="All 2 branches covered.">        for(k = 1; k &lt;= reverse; k++)</span>
         {
-<span class="fc bfc" id="L533" title="All 2 branches covered.">            if(reverse % k == 0)</span>
+<span class="fc bfc" id="L503" title="All 2 branches covered.">            if(reverse % k == 0)</span>
             {
-<span class="fc" id="L535">                count2 ++;</span>
+<span class="fc" id="L505">                count2 ++;</span>
             }
         }
 
-<span class="fc bfc" id="L539" title="All 4 branches covered.">        if(count1 == 2 &amp;&amp; count2 == 2)</span>
+<span class="fc bfc" id="L509" title="All 4 branches covered.">        if(count1 == 2 &amp;&amp; count2 == 2)</span>
         {
-<span class="fc" id="L541">            System.out.println(&quot;\n&quot;+num + &quot; is an Emirp Number as: &quot;+ num + &quot; is a prime number and its reverse &quot; + reverse + &quot; is also a prime number.&quot;);</span>
-<span class="fc" id="L542">            return true;</span>
+<span class="fc" id="L511">            System.out.println(&quot;\n&quot;+num + &quot; is an Emirp Number as: &quot;+ num + &quot; is a prime number and its reverse &quot; + reverse + &quot; is also a prime number.&quot;);</span>
+<span class="fc" id="L512">            return true;</span>
         }
 
-<span class="pc bpc" id="L545" title="1 of 4 branches missed.">        else if(count1 == 2 &amp;&amp; count2 != 2)</span>
+<span class="pc bpc" id="L515" title="1 of 4 branches missed.">        else if(count1 == 2 &amp;&amp; count2 != 2)</span>
         {
-<span class="fc" id="L547">            System.out.println(&quot;\n&quot;+num + &quot; is not an Emirp number as its reverse is not a prime number. &quot; + num + &quot; itself is a Prime Number.&quot;);</span>
-<span class="fc" id="L548">            return false;</span>
+<span class="fc" id="L517">            System.out.println(&quot;\n&quot;+num + &quot; is not an Emirp number as its reverse is not a prime number. &quot; + num + &quot; itself is a Prime Number.&quot;);</span>
+<span class="fc" id="L518">            return false;</span>
         }
 
         else
         {
-<span class="fc" id="L553">            System.out.println(&quot;\n&quot;+num + &quot; is not a prime number hence cannot be an Emirp number&quot;);</span>
-<span class="fc" id="L554">            return false;</span>
+<span class="fc" id="L523">            System.out.println(&quot;\n&quot;+num + &quot; is not a prime number hence cannot be an Emirp number&quot;);</span>
+<span class="fc" id="L524">            return false;</span>
         }
     }
 
@@ -568,43 +538,40 @@ import java.util.ArrayList;
         //Definition
         //A number that can be expressed as the summation of two positive cubes in atleast two ways is called a Ramanujan Number.
 
-<span class="fc" id="L571">        System.out.println(&quot;\n\n\t\t\tRamanujan Number&quot;);</span>
-<span class="fc" id="L572">        System.out.println(&quot;\nDefinition: A number that can be expressed as the summation of two positive cubes in atleast two ways is called a Ramanujan Number.&quot;);</span>
+<span class="fc" id="L541">        System.out.println(&quot;\n\n\t\t\tRamanujan Number&quot;);</span>
+<span class="fc" id="L542">        System.out.println(&quot;\nDefinition: A number that can be expressed as the summation of two positive cubes in atleast two ways is called a Ramanujan Number.&quot;);</span>
 
-<span class="fc" id="L574">        int num1,num2,cubes, cnt = 0;</span>
+<span class="fc" id="L544">        int num1,num2,cubes, cnt = 0;</span>
 
-        //System.out.println(&quot;\nEnter a number:&quot;);
-        //int num = Integer.parseInt(buff_reader.readLine());
-
-<span class="fc bfc" id="L579" title="All 2 branches covered.">        if(num == 1729)</span>
+<span class="fc bfc" id="L546" title="All 2 branches covered.">        if(num == 1729)</span>
         {
-<span class="fc" id="L581">            System.out.println(&quot;\n\n&quot; + num + &quot; is the smallest Ramanujan Number&quot;);</span>
-<span class="fc" id="L582">            return true;</span>
+<span class="fc" id="L548">            System.out.println(&quot;\n\n&quot; + num + &quot; is the smallest Ramanujan Number&quot;);</span>
+<span class="fc" id="L549">            return true;</span>
         }
 
-<span class="fc bfc" id="L585" title="All 2 branches covered.">        for(num1 = 1; num1 &lt; num; num1++)</span>
+<span class="fc bfc" id="L552" title="All 2 branches covered.">        for(num1 = 1; num1 &lt; num; num1++)</span>
         {
-<span class="fc bfc" id="L587" title="All 2 branches covered.">            for(num2 = 1; num2 &lt; num; num2++)</span>
+<span class="fc bfc" id="L554" title="All 2 branches covered.">            for(num2 = 1; num2 &lt; num; num2++)</span>
             {
-<span class="fc" id="L589">                cubes = (int)(Math.pow(num1 , 3) + Math.pow(num2 , 3));</span>
+<span class="fc" id="L556">                cubes = (int)(Math.pow(num1 , 3) + Math.pow(num2 , 3));</span>
 
-<span class="fc bfc" id="L591" title="All 2 branches covered.">                if(cubes == num)</span>
+<span class="fc bfc" id="L558" title="All 2 branches covered.">                if(cubes == num)</span>
                 {
-<span class="fc" id="L593">                    cnt++;</span>
+<span class="fc" id="L560">                    cnt++;</span>
                 }
             }
         }
 
-<span class="fc bfc" id="L598" title="All 2 branches covered.">        if(cnt == 4)</span>
+<span class="fc bfc" id="L565" title="All 2 branches covered.">        if(cnt == 4)</span>
         {
-<span class="fc" id="L600">            System.out.println(&quot;\n\n&quot; + num + &quot; is a Ramanujan Number&quot;);</span>
-<span class="fc" id="L601">            return true;</span>
+<span class="fc" id="L567">            System.out.println(&quot;\n\n&quot; + num + &quot; is a Ramanujan Number&quot;);</span>
+<span class="fc" id="L568">            return true;</span>
         }
 
         else
         {
-<span class="fc" id="L606">            System.out.println(&quot;\n\n&quot; + num + &quot; isn't a Ramanujan Number&quot;);</span>
-<span class="fc" id="L607">            return false;</span>
+<span class="fc" id="L573">            System.out.println(&quot;\n\n&quot; + num + &quot; isn't a Ramanujan Number&quot;);</span>
+<span class="fc" id="L574">            return false;</span>
         }
 
     }
@@ -621,31 +588,28 @@ import java.util.ArrayList;
     {
         // Armstrong no. = sum of cubes of the digits of a given number is equal to the number itself
 
-        //System.out.println(&quot;\nEnter a number:&quot;);
-        //int num = Integer.parseInt(buff_reader.readLine());
+<span class="fc" id="L591">        System.out.println(&quot;\n\n\t\t\tArmstrong Number&quot;);</span>
+<span class="fc" id="L592">        System.out.println(&quot;\nDefinition: Armstrong no. = sum of cubes of the digits of a given number is equal to the number itself&quot;);</span>
 
-<span class="fc" id="L627">        System.out.println(&quot;\n\n\t\t\tArmstrong Number&quot;);</span>
-<span class="fc" id="L628">        System.out.println(&quot;\nDefinition: Armstrong no. = sum of cubes of the digits of a given number is equal to the number itself&quot;);</span>
-
-<span class="fc" id="L630">        int traverse_num = num;</span>
-<span class="fc" id="L631">        int rem , sum = 0;</span>
-<span class="fc bfc" id="L632" title="All 2 branches covered.">        while(num!=0)</span>
+<span class="fc" id="L594">        int traverse_num = num;</span>
+<span class="fc" id="L595">        int rem , sum = 0;</span>
+<span class="fc bfc" id="L596" title="All 2 branches covered.">        while(num!=0)</span>
         {
-<span class="fc" id="L634">            rem = num%10;</span>
-<span class="fc" id="L635">            sum = sum + (rem * rem * rem);</span>
-<span class="fc" id="L636">            num = num/10;</span>
+<span class="fc" id="L598">            rem = num%10;</span>
+<span class="fc" id="L599">            sum = sum + (rem * rem * rem);</span>
+<span class="fc" id="L600">            num = num/10;</span>
         }
-<span class="fc bfc" id="L638" title="All 2 branches covered.">        if(sum == traverse_num)</span>
+<span class="fc bfc" id="L602" title="All 2 branches covered.">        if(sum == traverse_num)</span>
         {
 
-<span class="fc" id="L641">            System.out.println(&quot;\n\n&quot;+num+&quot;is an Armstrong Number.&quot;);</span>
-<span class="fc" id="L642">            return true;</span>
+<span class="fc" id="L605">            System.out.println(&quot;\n\n&quot;+num+&quot;is an Armstrong Number.&quot;);</span>
+<span class="fc" id="L606">            return true;</span>
         }
         else
         {
 
-<span class="fc" id="L647">            System.out.println(&quot;\n\n&quot;+num+&quot;is not an Armstrong Number.&quot;);</span>
-<span class="fc" id="L648">            return false;</span>
+<span class="fc" id="L611">            System.out.println(&quot;\n\n&quot;+num+&quot;is not an Armstrong Number.&quot;);</span>
+<span class="fc" id="L612">            return false;</span>
         }
     }
 
@@ -660,31 +624,28 @@ import java.util.ArrayList;
         //The summation of all factors of a given number except itself is
         //equal to the number, then the number is called a Perfect Number.
 
-        //System.out.println(&quot;\nEnter a number:&quot;);
-        //int num = Integer.parseInt(buff_reader.readLine());
+<span class="fc" id="L627">        System.out.println(&quot;\n\n\t\t\tPerfect Number&quot;);</span>
+<span class="fc" id="L628">        System.out.println(&quot;\nDefinition: The summation of all factors of a given number except itself is equal to the number, then the number is called a Perfect Number.&quot;);</span>
 
-<span class="fc" id="L666">        System.out.println(&quot;\n\n\t\t\tPerfect Number&quot;);</span>
-<span class="fc" id="L667">        System.out.println(&quot;\nDefinition: The summation of all factors of a given number except itself is equal to the number, then the number is called a Perfect Number.&quot;);</span>
-
-<span class="fc" id="L669">        int l , sum = 0;</span>
-<span class="fc bfc" id="L670" title="All 2 branches covered.">        for(l = 1; l &lt; num; l++)</span>
+<span class="fc" id="L630">        int l , sum = 0;</span>
+<span class="fc bfc" id="L631" title="All 2 branches covered.">        for(l = 1; l &lt; num; l++)</span>
         {
-<span class="fc bfc" id="L672" title="All 2 branches covered.">            if(num % l == 0)</span>
+<span class="fc bfc" id="L633" title="All 2 branches covered.">            if(num % l == 0)</span>
             {
-<span class="fc" id="L674">                sum = sum + l;</span>
+<span class="fc" id="L635">                sum = sum + l;</span>
             }
         }
-<span class="fc bfc" id="L677" title="All 2 branches covered.">        if(sum == num)</span>
+<span class="fc bfc" id="L638" title="All 2 branches covered.">        if(sum == num)</span>
         {
 
-<span class="fc" id="L680">            System.out.println(&quot;\n\n&quot;+num + &quot; is a Perfect Number&quot;);</span>
-<span class="fc" id="L681">            return true;</span>
+<span class="fc" id="L641">            System.out.println(&quot;\n\n&quot;+num + &quot; is a Perfect Number&quot;);</span>
+<span class="fc" id="L642">            return true;</span>
         }
         else
         {
 
-<span class="fc" id="L686">            System.out.println(&quot;\n\n&quot;+num + &quot; isn't a Perfect Number&quot;);</span>
-<span class="fc" id="L687">            return false;</span>
+<span class="fc" id="L647">            System.out.println(&quot;\n\n&quot;+num + &quot; isn't a Perfect Number&quot;);</span>
+<span class="fc" id="L648">            return false;</span>
         }
     }
 
@@ -699,37 +660,37 @@ import java.util.ArrayList;
     {
         // A number whose sum of factorials is equal to the number itself, is called a strong number.
 
-<span class="fc" id="L702">        System.out.println(&quot;\n\n\t\t\tStrong Number&quot;);</span>
-<span class="fc" id="L703">        System.out.println(&quot;\nDefinition: A number whose sum of factorials is equal to the number itself, is called a strong number.&quot;);</span>
+<span class="fc" id="L663">        System.out.println(&quot;\n\n\t\t\tStrong Number&quot;);</span>
+<span class="fc" id="L664">        System.out.println(&quot;\nDefinition: A number whose sum of factorials is equal to the number itself, is called a strong number.&quot;);</span>
 
 
-<span class="fc" id="L706">        int traverse_num = num , rem , sum = 0 , power = 1;</span>
+<span class="fc" id="L667">        int traverse_num = num , rem , sum = 0 , power = 1;</span>
 
-<span class="fc bfc" id="L708" title="All 2 branches covered.">        while(traverse_num != 0)</span>
+<span class="fc bfc" id="L669" title="All 2 branches covered.">        while(traverse_num != 0)</span>
         {
-<span class="fc" id="L710">            rem = traverse_num % 10;</span>
+<span class="fc" id="L671">            rem = traverse_num % 10;</span>
 
-<span class="fc bfc" id="L712" title="All 2 branches covered.">            for(int i = rem; i &gt;= 1;i --)</span>
+<span class="fc bfc" id="L673" title="All 2 branches covered.">            for(int i = rem; i &gt;= 1;i --)</span>
             {
-<span class="fc" id="L714">                power = power * i;</span>
+<span class="fc" id="L675">                power = power * i;</span>
             }
 
-<span class="fc" id="L717">            sum = sum + power;</span>
-<span class="fc" id="L718">            traverse_num = traverse_num / 10;</span>
-<span class="fc" id="L719">            power=1;</span>
+<span class="fc" id="L678">            sum = sum + power;</span>
+<span class="fc" id="L679">            traverse_num = traverse_num / 10;</span>
+<span class="fc" id="L680">            power=1;</span>
         }
 
-<span class="fc bfc" id="L722" title="All 2 branches covered.">        if(sum == num)</span>
+<span class="fc bfc" id="L683" title="All 2 branches covered.">        if(sum == num)</span>
         {
-<span class="fc" id="L724">            System.out.println(&quot;\n\n&quot;+num + &quot; is a Strong Number&quot;);</span>
-<span class="fc" id="L725">            return true;</span>
+<span class="fc" id="L685">            System.out.println(&quot;\n\n&quot;+num + &quot; is a Strong Number&quot;);</span>
+<span class="fc" id="L686">            return true;</span>
 
         }
 
         else
         {
-<span class="fc" id="L731">            System.out.println(&quot;\n\n&quot;+num + &quot; is not a Strong Number&quot;);</span>
-<span class="fc" id="L732">            return false;</span>
+<span class="fc" id="L692">            System.out.println(&quot;\n\n&quot;+num + &quot; is not a Strong Number&quot;);</span>
+<span class="fc" id="L693">            return false;</span>
         }
     }
 
@@ -742,47 +703,43 @@ import java.util.ArrayList;
     boolean Evil_Num(int num)throws IOException
     {
         //A positive and whole number which has even number of 1’s in its binary form is called an evil number.
+        
+<span class="fc" id="L707">        System.out.println(&quot;\n\n\t\t\tEvil Number&quot;);</span>
+<span class="fc" id="L708">        System.out.println(&quot;\nDefinition: A positive and whole number which has even number of 1’s in its binary form is called an evil number.&quot;);</span>
 
-        //System.out.println(&quot;Enter a no.&quot;);
-        //int n = Integer.parseInt(dfs.readLine());
+<span class="fc" id="L710">        int traverse_num = num;</span>
+<span class="fc" id="L711">        String str = &quot;&quot;;</span>
 
+<span class="fc" id="L713">        char bin_dig[] = {'0', '1'};</span>
+<span class="fc" id="L714">        int a, cnt = 0, rem;</span>
 
-<span class="fc" id="L750">        System.out.println(&quot;\n\n\t\t\tEvil Number&quot;);</span>
-<span class="fc" id="L751">        System.out.println(&quot;\nDefinition: A positive and whole number which has even number of 1’s in its binary form is called an evil number.&quot;);</span>
-
-<span class="fc" id="L753">        int traverse_num = num;</span>
-<span class="fc" id="L754">        String str = &quot;&quot;;</span>
-
-<span class="fc" id="L756">        char bin_dig[] = {'0', '1'};</span>
-<span class="fc" id="L757">        int a, cnt = 0, rem;</span>
-
-<span class="fc bfc" id="L759" title="All 2 branches covered.">        while(traverse_num &gt; 0)</span>
+<span class="fc bfc" id="L716" title="All 2 branches covered.">        while(traverse_num &gt; 0)</span>
         {
-<span class="fc" id="L761">            rem = traverse_num% 2;</span>
-<span class="fc" id="L762">            str = bin_dig[rem] + str;</span>
-<span class="fc" id="L763">            traverse_num = traverse_num/2;</span>
+<span class="fc" id="L718">            rem = traverse_num% 2;</span>
+<span class="fc" id="L719">            str = bin_dig[rem] + str;</span>
+<span class="fc" id="L720">            traverse_num = traverse_num/2;</span>
         }
-<span class="fc" id="L765">        System.out.println(str);</span>
+<span class="fc" id="L722">        System.out.println(str);</span>
 
-<span class="fc" id="L767">        int l = str.length();</span>
-<span class="fc bfc" id="L768" title="All 2 branches covered.">        for(a = 0; a &lt; l; a++)</span>
+<span class="fc" id="L724">        int l = str.length();</span>
+<span class="fc bfc" id="L725" title="All 2 branches covered.">        for(a = 0; a &lt; l; a++)</span>
         {
-<span class="fc" id="L770">            char charac = str.charAt(a);</span>
-<span class="fc bfc" id="L771" title="All 2 branches covered.">            if(charac == '1')</span>
+<span class="fc" id="L727">            char charac = str.charAt(a);</span>
+<span class="fc bfc" id="L728" title="All 2 branches covered.">            if(charac == '1')</span>
             {
-<span class="fc" id="L773">                cnt ++;</span>
+<span class="fc" id="L730">                cnt ++;</span>
             }
         }
 
-<span class="fc bfc" id="L777" title="All 2 branches covered.">        if(cnt % 2 == 0)</span>
+<span class="fc bfc" id="L734" title="All 2 branches covered.">        if(cnt % 2 == 0)</span>
         {
-<span class="fc" id="L779">            System.out.println(&quot;\n\n&quot;+num + &quot; is an Evil Number&quot;);</span>
-<span class="fc" id="L780">            return true;</span>
+<span class="fc" id="L736">            System.out.println(&quot;\n\n&quot;+num + &quot; is an Evil Number&quot;);</span>
+<span class="fc" id="L737">            return true;</span>
         }
         else
         {
-<span class="fc" id="L784">            System.out.println(&quot;\n\n&quot;+num + &quot; an Evil Number&quot;);</span>
-<span class="fc" id="L785">            return false;</span>
+<span class="fc" id="L741">            System.out.println(&quot;\n\n&quot;+num + &quot; an Evil Number&quot;);</span>
+<span class="fc" id="L742">            return false;</span>
 
         }
     }
@@ -795,15 +752,15 @@ import java.util.ArrayList;
 
     public static void main(String[] args) throws IOException {
 
-<span class="nc" id="L798">        Scanner sc=new Scanner(System.in);</span>
-<span class="nc" id="L799">        Num_Theory num_th = new Num_Theory();</span>
+<span class="nc" id="L755">        Scanner sc=new Scanner(System.in);</span>
+<span class="nc" id="L756">        Num_Theory num_th = new Num_Theory();</span>
 
-<span class="nc" id="L801">        while(true) {</span>
-<span class="nc" id="L802">            System.out.println(&quot;\n\n\t\t\t================================&quot;);</span>
-<span class="nc" id="L803">            System.out.println(&quot;\t\t\tSpecial Numbers In Number Theory&quot;);</span>
-<span class="nc" id="L804">            System.out.println(&quot;\t\t\t================================&quot;);</span>
+<span class="nc" id="L758">        while(true) {</span>
+<span class="nc" id="L759">            System.out.println(&quot;\n\n\t\t\t================================&quot;);</span>
+<span class="nc" id="L760">            System.out.println(&quot;\t\t\tSpecial Numbers In Number Theory&quot;);</span>
+<span class="nc" id="L761">            System.out.println(&quot;\t\t\t================================&quot;);</span>
 
-<span class="nc" id="L806">            System.out.println(&quot;1.Goldbach Number\n&quot;</span>
+<span class="nc" id="L763">            System.out.println(&quot;1.Goldbach Number\n&quot;</span>
 
                     + &quot;2.Hamming Number\n&quot;
 
@@ -836,92 +793,92 @@ import java.util.ArrayList;
                     + &quot;16.Exit\n&quot;
             );
 
-<span class="nc" id="L839">            System.out.println(&quot;\n\nEnter your number choice:&quot;);</span>
-<span class="nc" id="L840">            int choice = sc.nextInt();</span>
-<span class="nc" id="L841">            int num = 0;</span>
+<span class="nc" id="L796">            System.out.println(&quot;\n\nEnter your number choice:&quot;);</span>
+<span class="nc" id="L797">            int choice = sc.nextInt();</span>
+<span class="nc" id="L798">            int num = 0;</span>
 
-<span class="nc bnc" id="L843" title="All 17 branches missed.">            switch(choice)</span>
+<span class="nc bnc" id="L800" title="All 17 branches missed.">            switch(choice)</span>
             {
 
-<span class="nc" id="L846">                case 1: System.out.println(&quot;\nEnter positive even number:&quot;);</span>
-<span class="nc" id="L847">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L848">                    num_th.Goldbach_Num(num);</span>
-<span class="nc" id="L849">                    break;</span>
+<span class="nc" id="L803">                case 1: System.out.println(&quot;\nEnter positive even number:&quot;);</span>
+<span class="nc" id="L804">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L805">                    num_th.Goldbach_Num(num);</span>
+<span class="nc" id="L806">                    break;</span>
 
-<span class="nc" id="L851">                case 2: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L852">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L853">                    num_th.Hamming_Num(num);</span>
-<span class="nc" id="L854">                    break;</span>
+<span class="nc" id="L808">                case 2: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L809">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L810">                    num_th.Hamming_Num(num);</span>
+<span class="nc" id="L811">                    break;</span>
 
-<span class="nc" id="L856">                case 3: System.out.println(&quot;\nEnter number:&quot;);</span>
-<span class="nc" id="L857">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L858">                    num_th.Narcissistic_Num(num);</span>
-<span class="nc" id="L859">                    break;</span>
+<span class="nc" id="L813">                case 3: System.out.println(&quot;\nEnter number:&quot;);</span>
+<span class="nc" id="L814">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L815">                    num_th.Narcissistic_Num(num);</span>
+<span class="nc" id="L816">                    break;</span>
 
-<span class="nc" id="L861">                case 4: System.out.println(&quot;\nEnter positive number:&quot;);</span>
-<span class="nc" id="L862">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L863">                    num_th.Markov_Num(num);</span>
-<span class="nc" id="L864">                    break;</span>
+<span class="nc" id="L818">                case 4: System.out.println(&quot;\nEnter positive number:&quot;);</span>
+<span class="nc" id="L819">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L820">                    num_th.Markov_Num(num);</span>
+<span class="nc" id="L821">                    break;</span>
 
-<span class="nc" id="L866">                case 5: System.out.println(&quot;\nEnter positive number:&quot;);</span>
-<span class="nc" id="L867">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L868">                    num_th.Colombian_Num(num);</span>
-<span class="nc" id="L869">                    break;</span>
+<span class="nc" id="L823">                case 5: System.out.println(&quot;\nEnter positive number:&quot;);</span>
+<span class="nc" id="L824">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L825">                    num_th.Colombian_Num(num);</span>
+<span class="nc" id="L826">                    break;</span>
 
-<span class="nc" id="L871">                case 6: System.out.println(&quot;\nEnter non-negative number:&quot;);</span>
-<span class="nc" id="L872">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L873">                    num_th.Thabit_Num(num);</span>
-<span class="nc" id="L874">                    break;</span>
+<span class="nc" id="L828">                case 6: System.out.println(&quot;\nEnter non-negative number:&quot;);</span>
+<span class="nc" id="L829">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L830">                    num_th.Thabit_Num(num);</span>
+<span class="nc" id="L831">                    break;</span>
 
-<span class="nc" id="L876">                case 7: System.out.println(&quot;\nEnter a natural number:&quot;);</span>
-<span class="nc" id="L877">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L878">                    num_th.Woodall_Num(num);</span>
-<span class="nc" id="L879">                    break;</span>
+<span class="nc" id="L833">                case 7: System.out.println(&quot;\nEnter a natural number:&quot;);</span>
+<span class="nc" id="L834">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L835">                    num_th.Woodall_Num(num);</span>
+<span class="nc" id="L836">                    break;</span>
 
-<span class="nc" id="L881">                case 8: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L882">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L883">                    num_th.Leyland_Num(num);</span>
-<span class="nc" id="L884">                    break;</span>
+<span class="nc" id="L838">                case 8: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L839">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L840">                    num_th.Leyland_Num(num);</span>
+<span class="nc" id="L841">                    break;</span>
 
-<span class="nc" id="L886">                case 9: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L887">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L888">                    num_th.Perfect_Num(num);</span>
-<span class="nc" id="L889">                    break;</span>
+<span class="nc" id="L843">                case 9: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L844">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L845">                    num_th.Perfect_Num(num);</span>
+<span class="nc" id="L846">                    break;</span>
 
-<span class="nc" id="L891">                case 11: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L892">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L893">                    num_th.Sociable_Num(num);</span>
-<span class="nc" id="L894">                    break;</span>
+<span class="nc" id="L848">                case 11: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L849">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L850">                    num_th.Sociable_Num(num);</span>
+<span class="nc" id="L851">                    break;</span>
 
-<span class="nc" id="L896">                case 12: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L897">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L898">                    num_th.Emirp_Num(num);</span>
-<span class="nc" id="L899">                    break;</span>
+<span class="nc" id="L853">                case 12: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L854">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L855">                    num_th.Emirp_Num(num);</span>
+<span class="nc" id="L856">                    break;</span>
 
-<span class="nc" id="L901">                case 13: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L902">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L903">                    num_th.Armstrong_Num(num);</span>
-<span class="nc" id="L904">                    break;</span>
+<span class="nc" id="L858">                case 13: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L859">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L860">                    num_th.Armstrong_Num(num);</span>
+<span class="nc" id="L861">                    break;</span>
 
-<span class="nc" id="L906">                case 14: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L907">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L908">                    num_th.Ramanujan_Num(num);</span>
-<span class="nc" id="L909">                    break;</span>
+<span class="nc" id="L863">                case 14: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L864">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L865">                    num_th.Ramanujan_Num(num);</span>
+<span class="nc" id="L866">                    break;</span>
 
-<span class="nc" id="L911">                case 15: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L912">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L913">                    num_th.Strong_Num(num);</span>
-<span class="nc" id="L914">                    break;</span>
+<span class="nc" id="L868">                case 15: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L869">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L870">                    num_th.Strong_Num(num);</span>
+<span class="nc" id="L871">                    break;</span>
 
 
-<span class="nc" id="L917">                case 16: System.out.println(&quot;\nEnter a number:&quot;);</span>
-<span class="nc" id="L918">                    num = Integer.parseInt(buff_reader.readLine());</span>
-<span class="nc" id="L919">                    num_th.Evil_Num(num);</span>
-<span class="nc" id="L920">                    break;</span>
+<span class="nc" id="L874">                case 16: System.out.println(&quot;\nEnter a number:&quot;);</span>
+<span class="nc" id="L875">                    num = Integer.parseInt(buff_reader.readLine());</span>
+<span class="nc" id="L876">                    num_th.Evil_Num(num);</span>
+<span class="nc" id="L877">                    break;</span>
 
-<span class="nc" id="L922">                case 17: System.exit(0);</span>
+<span class="nc" id="L879">                case 17: System.exit(0);</span>
 
-<span class="nc" id="L924">                default: System.out.println(&quot;Wrong choice!!&quot;);</span>
+<span class="nc" id="L881">                default: System.out.println(&quot;Wrong choice!!&quot;);</span>
 
             }
         }

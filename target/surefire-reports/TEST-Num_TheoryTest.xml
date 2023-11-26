@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Num_TheoryTest" time="2.368" tests="49" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Num_TheoryTest" time="2.42" tests="49" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master/target/test-classes:/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master/target/classes:/Users/mac/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/mac/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing/target/test-classes:/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing/target/classes:/Users/mac/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/mac/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
@@ -12,10 +12,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/20/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master/target/surefire/surefirebooter-20231126194054524_3.jar /Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master/target/surefire 2023-11-26T19-40-54_117-jvmRun1 surefire-20231126194054524_1tmp surefire_0-20231126194054524_2tmp"/>
+    <property name="sun.java.command" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing/target/surefire/surefirebooter-20231126224311883_3.jar /Users/mac/Desktop/Control-Flow-Graphs-Software-Testing/target/surefire 2023-11-26T22-43-11_558-jvmRun1 surefire-20231126224311883_1tmp surefire_0-20231126224311883_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master/target/test-classes:/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master/target/classes:/Users/mac/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/mac/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing/target/test-classes:/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing/target/classes:/Users/mac/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/mac/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/mac"/>
     <property name="user.language" value="en"/>
@@ -23,13 +23,13 @@
     <property name="java.version.date" value="2023-03-21"/>
     <property name="java.home" value="/usr/local/Cellar/openjdk/20/libexec/openjdk.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master"/>
+    <property name="basedir" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master/target/surefire/surefirebooter-20231126194054524_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing/target/surefire/surefirebooter-20231126224311883_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="20"/>
@@ -45,7 +45,7 @@
     <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
     <property name="java.io.tmpdir" value="/var/folders/zq/mcvsqgcn6wgfn6_rz91j3cy00000gn/T/"/>
     <property name="java.version" value="20"/>
-    <property name="user.dir" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing-master"/>
+    <property name="user.dir" value="/Users/mac/Desktop/Control-Flow-Graphs-Software-Testing"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -58,7 +58,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="testWoodall_Num_1" classname="Num_TheoryTest" time="0.029">
+  <testcase name="testWoodall_Num_1" classname="Num_TheoryTest" time="0.014">
     <system-out><![CDATA[
 
 			Woodall Number
@@ -69,7 +69,7 @@ Definition: Woodall number is any natural number 'W_num' that satisfies form W_n
 1 is a Woodall Number for num = 1
 ]]></system-out>
   </testcase>
-  <testcase name="testWoodall_Num_2" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testWoodall_Num_2" classname="Num_TheoryTest" time="0.008">
     <system-out><![CDATA[
 
 			Woodall Number
@@ -80,7 +80,7 @@ Definition: Woodall number is any natural number 'W_num' that satisfies form W_n
 7 is a Woodall Number for num = 2
 ]]></system-out>
   </testcase>
-  <testcase name="testWoodall_Num_3" classname="Num_TheoryTest" time="0.014">
+  <testcase name="testWoodall_Num_3" classname="Num_TheoryTest" time="0.016">
     <system-out><![CDATA[
 
 			Woodall Number
@@ -91,7 +91,7 @@ Definition: Woodall number is any natural number 'W_num' that satisfies form W_n
 23 is a Woodall Number for num = 3
 ]]></system-out>
   </testcase>
-  <testcase name="testWoodall_Num_4" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testWoodall_Num_4" classname="Num_TheoryTest" time="0.004">
     <system-out><![CDATA[
 
 			Woodall Number
@@ -102,7 +102,7 @@ Definition: Woodall number is any natural number 'W_num' that satisfies form W_n
 Invalid input: 0 is not a natural number
 ]]></system-out>
   </testcase>
-  <testcase name="testWoodall_Num_5" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testWoodall_Num_5" classname="Num_TheoryTest" time="0.01">
     <system-out><![CDATA[
 
 			Woodall Number
@@ -113,7 +113,7 @@ Definition: Woodall number is any natural number 'W_num' that satisfies form W_n
 6 is not a Woodall Number
 ]]></system-out>
   </testcase>
-  <testcase name="testLeyland_Num_1" classname="Num_TheoryTest" time="0">
+  <testcase name="testLeyland_Num_1" classname="Num_TheoryTest" time="0.002">
     <system-out><![CDATA[
 
 			Leyland Number
@@ -124,7 +124,7 @@ Definition: Leyland number 'num' is a number where num = num1^num2 + num2^num1 ,
 2 is not a Leyland number
 ]]></system-out>
   </testcase>
-  <testcase name="testLeyland_Num_2" classname="Num_TheoryTest" time="0.002">
+  <testcase name="testLeyland_Num_2" classname="Num_TheoryTest" time="0.008">
     <system-out><![CDATA[
 
 			Leyland Number
@@ -135,7 +135,7 @@ Definition: Leyland number 'num' is a number where num = num1^num2 + num2^num1 ,
 Invalid input: -3 is not greater than 1
 ]]></system-out>
   </testcase>
-  <testcase name="testLeyland_Num_3" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testLeyland_Num_3" classname="Num_TheoryTest" time="0.011">
     <system-out><![CDATA[
 
 			Leyland Number
@@ -146,9 +146,9 @@ Definition: Leyland number 'num' is a number where num = num1^num2 + num2^num1 ,
 145 is a Leyland number
 ]]></system-out>
   </testcase>
-  <testcase name="testOdd_prime_num_1" classname="Num_TheoryTest" time="0"/>
-  <testcase name="testOdd_prime_num_2" classname="Num_TheoryTest" time="0"/>
-  <testcase name="testArmstrong_Num_1" classname="Num_TheoryTest" time="0.01">
+  <testcase name="testOdd_prime_num_1" classname="Num_TheoryTest" time="0.002"/>
+  <testcase name="testOdd_prime_num_2" classname="Num_TheoryTest" time="0.006"/>
+  <testcase name="testArmstrong_Num_1" classname="Num_TheoryTest" time="0.014">
     <system-out><![CDATA[
 
 			Armstrong Number
@@ -159,7 +159,7 @@ Definition: Armstrong no. = sum of cubes of the digits of a given number is equa
 0is an Armstrong Number.
 ]]></system-out>
   </testcase>
-  <testcase name="testArmstrong_Num_2" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testArmstrong_Num_2" classname="Num_TheoryTest" time="0.005">
     <system-out><![CDATA[
 
 			Armstrong Number
@@ -170,7 +170,7 @@ Definition: Armstrong no. = sum of cubes of the digits of a given number is equa
 0is not an Armstrong Number.
 ]]></system-out>
   </testcase>
-  <testcase name="testPerfect_Num_1" classname="Num_TheoryTest" time="0.002">
+  <testcase name="testPerfect_Num_1" classname="Num_TheoryTest" time="0.008">
     <system-out><![CDATA[
 
 			Perfect Number
@@ -181,7 +181,7 @@ Definition: The summation of all factors of a given number except itself is equa
 496 is a Perfect Number
 ]]></system-out>
   </testcase>
-  <testcase name="testPerfect_Num_2" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testPerfect_Num_2" classname="Num_TheoryTest" time="0.011">
     <system-out><![CDATA[
 
 			Perfect Number
@@ -203,7 +203,7 @@ Definition: Thabit Number is an integer of form : 3 * 2^num - 1 , num = non-nega
 0 is not a Thabit Number
 ]]></system-out>
   </testcase>
-  <testcase name="testThabit_Num_2" classname="Num_TheoryTest" time="0.016">
+  <testcase name="testThabit_Num_2" classname="Num_TheoryTest" time="0.002">
     <system-out><![CDATA[
 
 			Thabit Number
@@ -225,7 +225,7 @@ Definition: Thabit Number is an integer of form : 3 * 2^num - 1 , num = non-nega
 11 is a Thabit Number
 ]]></system-out>
   </testcase>
-  <testcase name="testThabit_Num_4" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testThabit_Num_4" classname="Num_TheoryTest" time="0.004">
     <system-out><![CDATA[
 
 			Thabit Number
@@ -236,7 +236,7 @@ Definition: Thabit Number is an integer of form : 3 * 2^num - 1 , num = non-nega
 47 is a Thabit Number
 ]]></system-out>
   </testcase>
-  <testcase name="testThabit_Num_5" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testThabit_Num_5" classname="Num_TheoryTest" time="0.004">
     <system-out><![CDATA[
 
 			Thabit Number
@@ -247,7 +247,7 @@ Definition: Thabit Number is an integer of form : 3 * 2^num - 1 , num = non-nega
 6 is not a Thabit Number
 ]]></system-out>
   </testcase>
-  <testcase name="testMarkov_Num_1" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testMarkov_Num_1" classname="Num_TheoryTest" time="0.006">
     <system-out><![CDATA[
 
 			Markov Number
@@ -259,7 +259,7 @@ Definition: Markov number are the positive integers x, y, z that appear in the s
 First Triplet Containing the Markov Number: [1 , 34 , 89]
 ]]></system-out>
   </testcase>
-  <testcase name="testMarkov_Num_2" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testMarkov_Num_2" classname="Num_TheoryTest" time="0.018">
     <system-out><![CDATA[
 
 			Markov Number
@@ -269,7 +269,7 @@ Definition: Markov number are the positive integers x, y, z that appear in the s
 65 is not a Markov Number
 ]]></system-out>
   </testcase>
-  <testcase name="testMarkov_Num_3" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testMarkov_Num_3" classname="Num_TheoryTest" time="0.003">
     <system-out><![CDATA[
 
 			Markov Number
@@ -292,7 +292,7 @@ Definition: Narcissistic number is a number that is the summation of its digits 
 57 is not a Narcissistic Number
 ]]></system-out>
   </testcase>
-  <testcase name="testNarcissistic_Num_2" classname="Num_TheoryTest" time="0">
+  <testcase name="testNarcissistic_Num_2" classname="Num_TheoryTest" time="0.003">
     <system-out><![CDATA[
 
 			Narcissistic Number
@@ -303,7 +303,7 @@ Definition: Narcissistic number is a number that is the summation of its digits 
 153 is a Narcissistic Number
 ]]></system-out>
   </testcase>
-  <testcase name="testRamanujan_Num_1" classname="Num_TheoryTest" time="1.191">
+  <testcase name="testRamanujan_Num_1" classname="Num_TheoryTest" time="1.171">
     <system-out><![CDATA[
 
 			Ramanujan Number
@@ -314,7 +314,7 @@ Definition: A number that can be expressed as the summation of two positive cube
 4104 is a Ramanujan Number
 ]]></system-out>
   </testcase>
-  <testcase name="testRamanujan_Num_2" classname="Num_TheoryTest" time="0.756">
+  <testcase name="testRamanujan_Num_2" classname="Num_TheoryTest" time="0.761">
     <system-out><![CDATA[
 
 			Ramanujan Number
@@ -325,7 +325,7 @@ Definition: A number that can be expressed as the summation of two positive cube
 3529 isn't a Ramanujan Number
 ]]></system-out>
   </testcase>
-  <testcase name="testRamanujan_Num_3" classname="Num_TheoryTest" time="0.002">
+  <testcase name="testRamanujan_Num_3" classname="Num_TheoryTest" time="0.001">
     <system-out><![CDATA[
 
 			Ramanujan Number
@@ -336,7 +336,7 @@ Definition: A number that can be expressed as the summation of two positive cube
 1729 is the smallest Ramanujan Number
 ]]></system-out>
   </testcase>
-  <testcase name="testStrong_Num_1" classname="Num_TheoryTest" time="0.002">
+  <testcase name="testStrong_Num_1" classname="Num_TheoryTest" time="0.001">
     <system-out><![CDATA[
 
 			Strong Number
@@ -347,7 +347,7 @@ Definition: A number whose sum of factorials is equal to the number itself, is c
 145 is a Strong Number
 ]]></system-out>
   </testcase>
-  <testcase name="testStrong_Num_2" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testStrong_Num_2" classname="Num_TheoryTest" time="0">
     <system-out><![CDATA[
 
 			Strong Number
@@ -358,7 +358,7 @@ Definition: A number whose sum of factorials is equal to the number itself, is c
 543 is not a Strong Number
 ]]></system-out>
   </testcase>
-  <testcase name="testHamming_Num_1" classname="Num_TheoryTest" time="0.002">
+  <testcase name="testHamming_Num_1" classname="Num_TheoryTest" time="0.001">
     <system-out><![CDATA[
 
 			Hamming Number
@@ -380,7 +380,7 @@ Definition: Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c   
 Did not find numbers a,b,c that obey the form Hamming_Num = 2^a * 3^b * 5^c
 ]]></system-out>
   </testcase>
-  <testcase name="testHamming_Num_3" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testHamming_Num_3" classname="Num_TheoryTest" time="0">
     <system-out><![CDATA[
 
 			Hamming Number
@@ -392,7 +392,7 @@ Definition: Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c   
 Did not find numbers a,b,c that obey the form Hamming_Num = 2^a * 3^b * 5^c
 ]]></system-out>
   </testcase>
-  <testcase name="testHamming_Num_4" classname="Num_TheoryTest" time="0.005">
+  <testcase name="testHamming_Num_4" classname="Num_TheoryTest" time="0.008">
     <system-out><![CDATA[
 
 			Hamming Number
@@ -404,7 +404,7 @@ Definition: Hamming numbers are nums of form: Hamming_Num  =  2^a * 3^b * 5^c   
 Did not find numbers a,b,c that obey the form Hamming_Num = 2^a * 3^b * 5^c
 ]]></system-out>
   </testcase>
-  <testcase name="testColombian_Num_1" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testColombian_Num_1" classname="Num_TheoryTest" time="0.002">
     <system-out><![CDATA[
 
 			Colombian Number
@@ -448,7 +448,7 @@ Definition: Colombian number is an integer that cannot be written as the summati
 21 is not a Colombian Number
 ]]></system-out>
   </testcase>
-  <testcase name="testEvil_Num_1" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testEvil_Num_1" classname="Num_TheoryTest" time="0.006">
     <system-out><![CDATA[
 
 			Evil Number
@@ -460,7 +460,7 @@ Definition: A positive and whole number which has even number of 1’s in its bi
 24 is an Evil Number
 ]]></system-out>
   </testcase>
-  <testcase name="testEvil_Num_2" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testEvil_Num_2" classname="Num_TheoryTest" time="0.002">
     <system-out><![CDATA[
 
 			Evil Number
@@ -472,7 +472,7 @@ Definition: A positive and whole number which has even number of 1’s in its bi
 4324 an Evil Number
 ]]></system-out>
   </testcase>
-  <testcase name="testSociable_Num_1" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testSociable_Num_1" classname="Num_TheoryTest" time="0">
     <system-out><![CDATA[
 
 			Sociable Number
@@ -483,7 +483,7 @@ Definition: Sociable numbers are numbers whose Aliquot sums form a periodic sequ
 14288 is a Sociable Number
 ]]></system-out>
   </testcase>
-  <testcase name="testSociable_Num_2" classname="Num_TheoryTest" time="0.006">
+  <testcase name="testSociable_Num_2" classname="Num_TheoryTest" time="0.001">
     <system-out><![CDATA[
 
 			Sociable Number
@@ -494,7 +494,7 @@ Definition: Sociable numbers are numbers whose Aliquot sums form a periodic sequ
 13 is not a Sociable number
 ]]></system-out>
   </testcase>
-  <testcase name="testSociable_Num_3" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testSociable_Num_3" classname="Num_TheoryTest" time="0">
     <system-out><![CDATA[
 
 			Sociable Number
@@ -516,7 +516,7 @@ Definition: Sociable numbers are numbers whose Aliquot sums form a periodic sequ
 1 is not a Sociable number
 ]]></system-out>
   </testcase>
-  <testcase name="testGoldbach_Num_1" classname="Num_TheoryTest" time="0.003">
+  <testcase name="testGoldbach_Num_1" classname="Num_TheoryTest" time="0.006">
     <system-out><![CDATA[
 
 			Goldbach Number
@@ -532,7 +532,7 @@ The Prime Partition for the given number is:
 80 is a Goldbach Number with the above Prime Pair partition.
 ]]></system-out>
   </testcase>
-  <testcase name="testGoldbach_Num_2" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testGoldbach_Num_2" classname="Num_TheoryTest" time="0">
     <system-out><![CDATA[
 
 			Goldbach Number
@@ -542,7 +542,7 @@ Goldbach number is a positive even integer that can be expressed as sum of two o
 Invalid input: You've either entered a negative or odd number
 ]]></system-out>
   </testcase>
-  <testcase name="testGoldbach_Num_3" classname="Num_TheoryTest" time="0.003">
+  <testcase name="testGoldbach_Num_3" classname="Num_TheoryTest" time="0.001">
     <system-out><![CDATA[
 
 			Goldbach Number
@@ -553,7 +553,7 @@ Goldbach number is a positive even integer that can be expressed as sum of two o
 2 is not a Goldbach Number. Did not find a prime partition for the given number.
 ]]></system-out>
   </testcase>
-  <testcase name="testEmirp_Num_1" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testEmirp_Num_1" classname="Num_TheoryTest" time="0.009">
     <system-out><![CDATA[
 
 			Emirp Number
@@ -563,7 +563,7 @@ Definition: Emirp Number is a prime number that results in another prime number 
 991 is an Emirp Number as: 991 is a prime number and its reverse 199 is also a prime number.
 ]]></system-out>
   </testcase>
-  <testcase name="testEmirp_Num_2" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testEmirp_Num_2" classname="Num_TheoryTest" time="0">
     <system-out><![CDATA[
 
 			Emirp Number
@@ -573,7 +573,7 @@ Definition: Emirp Number is a prime number that results in another prime number 
 625 is not a prime number hence cannot be an Emirp number
 ]]></system-out>
   </testcase>
-  <testcase name="testEmirp_Num_3" classname="Num_TheoryTest" time="0.001">
+  <testcase name="testEmirp_Num_3" classname="Num_TheoryTest" time="0.003">
     <system-out><![CDATA[
 
 			Emirp Number
