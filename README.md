@@ -1,16 +1,16 @@
 # Control-Flow-Graphs-Software-Testing
 
-## Overview
-The objective of this project is to analyze a Number Theory functionalities-based Java source code and perform Control Flow Graph testing on it. We have executed edge coverage and prime path coverage on various special numbers in the domain of number theory.
+## Project Overview:
+The goal of this project is to analyze a Java source code that focuses on Number Theory functionalities. Specifically, the code explores special numbers like Markov Numbers, Aliquot Sequences, and Ramanujan Numbers. These special numbers have applications in various domains, from cryptography to graphics.
 
 ## Code Description
-We have written a program demonstrating the workings of various special numbers such as the Markov Number, Aliquot Sequence, and Ramanujan Number. The functionalities displayed in this project has application in numerous domains ranging from cryptography to graphics.
+The program demonstrates the functionality of special numbers, showcasing their significance. It includes implementations related to Markov Numbers, Aliquot Sequences, and Ramanujan Numbers.
 
 ## Testing Strategy
-Control Flow Graph (CFG) testing is an approach that comes under white box testing. This technique determines the order of execution of statements in the program, i.e., how control flows in the graph. CFG offers a graphical representation of this control flow during the program execution. We have performed edge and prime path coverage on the CFGs for the application functionalities.
+Control Flow Graph (CFG) testing is employed as part of white box testing. This technique visualizes the order of statement execution in the program, representing how control flows during execution. The testing specifically includes edge and prime path coverage on CFGs for the application's functionalities.
 
-Our source code consists of decision statements, nested loops as well as a combination of both to thoroughly illustrate the usage of prime paths and explore all possible pathways over the nested loops and decision statements.
+The source code comprises decision statements, nested loops, and combinations of both to thoroughly illustrate the usage of prime paths. The goal is to explore all possible pathways, especially within nested loops and decision statements.
 
-We have done tests on the designed test cases using JUnit. JUnit is a testing framework for Java and is used for unit testing.
+JUnit is used for testing the designed test cases. JUnit is a testing framework for Java, commonly used for unit testing.
 
-We have also utilized a code coverage library named JaCoCo (Java Code Coverage) to check the percentage of line coverage achieved using our test cases.
+JaCoCo (Java Code Coverage) is utilized as a code coverage library. It helps measure the percentage of line coverage achieved by our test cases, ensuring comprehensive testing of the codebase.
